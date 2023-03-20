@@ -1,4 +1,4 @@
-import React, { FC, PropsWithChildren } from "react";
+import React, { FC, PropsWithChildren, useState } from "react";
 
 export enum CardVariant {
   outlined = "outlined",
@@ -17,6 +17,7 @@ const Card: FC<PropsWithChildren<CardProps>> = ({
   variant,
   children,
 }) => {
+  const [state, setState] = useState(0);
   return (
     <div
       style={{
